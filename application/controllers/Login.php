@@ -54,7 +54,6 @@ class Login extends CI_Controller {
         elseif($resultado == false)//Si el código ya fue usado o no existe
         {
             echo "1";
-            die();
         }
     }
 }
