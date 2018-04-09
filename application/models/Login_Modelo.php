@@ -15,9 +15,16 @@ class Login_Modelo extends CI_Model {
         $this->db->where('codigo', $codigo);
         $this->db->where('fechaInicio', null);
         $query = $this->db->get();
-
-        if (!empty($query->result())) {
-            return $query->result()[0]; //Puede loguearse
+        if($query->num_rows()>0){
+            foreach ($query->result() as $user) {
+                # code...
+                $datosSesion = array(
+                    'usuarioId'  => $user->codigo,
+                    'logged_in' => TRUE
+                );
+                $this->session->set_userdata($datosSesion);//Seteo de las variables de session
+                return true; //Puede loguearse
+            }
         }else
         {
             return false; //No puede loguearse

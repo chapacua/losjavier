@@ -35,6 +35,7 @@
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <!-- JS propio -->
       <script src="<?php echo base_url("application/views/public/js/loginJs.js"); ?>"></script>
+      <script>var base_url = '<?php echo base_url() ?>';</script>
     <?php
     if (isset($GET_['res']) AND $GET_['res'] == 'false'):
     ?>

@@ -24,7 +24,12 @@ class Login extends CI_Controller {
      */
 	public function index()
 	{
-		$this->load->view('login');
+        $userSession = $this->session->userdata('usuarioId');
+        if(empty($userSession)){
+		  $this->load->view('ingresar');
+        } else{
+            redirect('votacion');
+        }
 	}
 
     /**
@@ -39,21 +44,6 @@ class Login extends CI_Controller {
 
         $codigo = $this->input->post("codigo");//Recibo la variable
         $resultado = $this->Login_Modelo->validarCodigo($codigo);//Valido si el código exisite y si ya fue usado
-
-        if ($resultado <> false)//Si el código no ha sido usado y existe
-        {
-            $datosSesion = array(
-                'usuarioId'  => $resultado->usuariosId,
-                'logged_in' => TRUE
-            );
-            $this->session->set_userdata($datosSesion);//Seteo de las variables de session
-            redirect('votacion');
-
-            echo "2";
-        }
-        elseif($resultado == false)//Si el código ya fue usado o no existe
-        {
-            echo "1";
-        }
+        print json_encode($resultado);
     }
 }

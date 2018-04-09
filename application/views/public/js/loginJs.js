@@ -1,18 +1,20 @@
 $(document).ready(function() {
     //Login
-    $("#loginForm").submit(function () {
-        event.preventDefault();
+    $("#loginForm").submit(function(e){
+        e.preventDefault();
+        e.stopPropagation();
         $.ajax({
             url: $(this).attr("action"),
             type: $(this).attr("method"),
+            dataType: "json",
             data: $(this).serialize(),
-            success: function(data)
+            success: function(response)
             {
-                if (data== 1)
+                if (response)
                 {
-                    alert('pailas');
+                    window.location.href = base_url+'votacion/';
                 }else{
-                    alert('pasó');
+                    window.location.href = base_url;
                 }
             }
         });
