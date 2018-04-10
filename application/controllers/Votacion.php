@@ -129,6 +129,12 @@ class Votacion extends CI_Controller {
                 $this->load->view('tarjeton', $variables);
 
             elseif ($categoria_Actual == 'calma'):
+                $variables['categoria'] = 'simpatia';
+                $variables['titulo'] = 'Miss Simpatia';
+                $variables['descripcion'] = 'Vota por esa persona que normalmente le cae bien a la gente, no crea conflictos, se lleva bien con todos y siempre actúa con gentileza buscando que los demás se sientan bien en su compañía.';
+                $this->load->view('tarjeton', $variables);
+
+            elseif ($categoria_Actual == 'simpatia'):
                 $variables['categoria'] = 'imprudente';
                 $variables['titulo'] = 'Miss imprudente';
                 $variables['descripcion'] = 'Aquí la tendrás dificil, vota por esa persona que siempre dice lo que no debe cuando no debe, que siempre tiene un comentario fuera de tono, disonante o que no aplica y que por el cual has sentido "pena ajena".';

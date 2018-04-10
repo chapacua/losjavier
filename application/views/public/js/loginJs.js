@@ -14,7 +14,7 @@ $(document).ready(function() {
                 {
                     window.location.href = base_url+'votacion/';
                 }else{
-                    window.location.href = base_url;
+                    alert("error");
                 }
             }
         });

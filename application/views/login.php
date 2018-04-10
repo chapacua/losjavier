@@ -33,15 +33,12 @@
       <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
       <!-- Sweet Alert -->
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-      <!-- JS propio -->
-      <script src="<?php echo base_url("application/views/public/js/loginJs.js"); ?>"></script>
-      <script>var base_url = '<?php echo base_url() ?>';</script>
     <?php
-    if (isset($GET_['res']) AND $GET_['res'] == 'false'):
+    if (isset($ingreso )):
     ?>
       <script>
-          swal('oe');
+          swal("Lo sentimos!", "El usuario que ingresaste no es correcto, recuerda que es la primera parte del correo en el que recibiste esta URL!", "error");
       </script>
-    <?php endif; ?>
+    <?php  endif; ?>
     </body>
 </html>

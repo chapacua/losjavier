@@ -13,13 +13,12 @@ class Login_Modelo extends CI_Model {
         $this->db->select('*');
         $this->db->from('Usuarios');
         $this->db->where('codigo', $codigo);
-        $this->db->where('fechaInicio', null);
         $query = $this->db->get();
         if($query->num_rows()>0){
             foreach ($query->result() as $user) {
                 # code...
                 $datosSesion = array(
-                    'usuarioId'  => $user->codigo,
+                    'usuarioId'  => $user->usuariosId,
                     'logged_in' => TRUE
                 );
                 $this->session->set_userdata($datosSesion);//Seteo de las variables de session
