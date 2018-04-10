@@ -37,7 +37,7 @@
     if (isset($ingreso )):
     ?>
       <script>
-          swal("Lo sentimos!", "El usuario que ingresaste no es correcto, recuerda que es la primera parte del correo en el que recibiste esta URL!", "error");
+          swal("Lo sentimos!", "El usuario que ingresaste no es correcto, recuerda que es la primera parte del correo en el que recibiste esta URL! e.J <minombre>@midominio.com la parte que está entre <>", "error");
       </script>
     <?php  endif; ?>
     </body>
