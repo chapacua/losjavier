@@ -59,7 +59,7 @@ class Votacion extends CI_Controller {
             elseif ($categoria_Actual == 'mejorEstudianteInv'):
                 $variables['categoria'] = 'disculpas';
                 $variables['titulo'] = 'Miss Disculpas';
-                $variables['descripcion'] = 'El que siempre tiene una excusa para todo que ya ha matado más de una vez a las tias, abuelas y el perro.';
+                $variables['descripcion'] = 'El que siempre tiene una excusa para todo, que ya ha 7 veces la misma tía, mantiene en el "médico" y se le ha muerto el perro 8 veces.';
                 $this->load->view('tarjeton', $variables);
 
             elseif ($categoria_Actual == 'disculpas'):
@@ -77,7 +77,7 @@ class Votacion extends CI_Controller {
             elseif ($categoria_Actual == 'uniforme'):
                 $variables['categoria'] = 'mudo';
                 $variables['titulo'] = 'Miss mudo/a';
-                $variables['descripcion'] = '¿Quién es esa persona que luego de 9 meses de estudiar practicamente no le conoces la voz, su presencia solo se confirma durante el llamado a lista y luego se desvanece cual ninja en la oscuridad.';
+                $variables['descripcion'] = '¿Quién es esa persona que luego de 1 año de estudiar practicamente no le conoces la voz, su presencia solo se confirma durante el llamado a lista y luego se desvanece cual ninja en la oscuridad.';
                 $this->load->view('tarjeton', $variables);
 
             elseif ($categoria_Actual == 'mudo'):
@@ -101,7 +101,7 @@ class Votacion extends CI_Controller {
             elseif ($categoria_Actual == 'elevadoInv'):
                 $variables['categoria'] = 'asistencia';
                 $variables['titulo'] = 'Miss Asistencia';
-                $variables['descripcion'] = 'Vota por esa persona que cuando se levanta a orinar le tienden la cama y por eso nunca ha faltado a clase, su presencia en formación es una constante y el día que falte posiblemente el mundo termine o nazca el anticristo. (Ayuda: Maneja taxi)';
+                $variables['descripcion'] = 'Vota por esa persona que cuando se levanta a orinar le tienden la cama y por eso nunca ha faltado a clase, su presencia en formación es una constante y el día que falte posiblemente el mundo termine o nazca el anticristo.';
                 $this->load->view('tarjeton', $variables);
 
             elseif ($categoria_Actual == 'asistencia'):
@@ -139,8 +139,20 @@ class Votacion extends CI_Controller {
                 $variables['titulo'] = 'Miss imprudente';
                 $variables['descripcion'] = 'Aquí la tendrás dificil, vota por esa persona que siempre dice lo que no debe cuando no debe, que siempre tiene un comentario fuera de tono, disonante o que no aplica y que por el cual has sentido "pena ajena".';
                 $this->load->view('tarjeton', $variables);
-
+                
             elseif ($categoria_Actual == 'imprudente'):
+                $variables['categoria'] = 'nea';
+                $variables['titulo'] = 'Miss Nea';
+                $variables['descripcion'] = 'como todos en cualquier círculo social, nos encontramos ese personaje que inspira el aroma de una rosa, y por rosa, me refiero a la vendedora de rosas. Ese personaje que nos hace cruzar la calle al escucharle hablar. Digamos liendra, guiso o nea.';
+                $this->load->view('tarjeton', $variables);
+
+            elseif ($categoria_Actual == 'nea'):
+                $variables['categoria'] = 'guapo';
+                $variables['titulo'] = 'Miss guapo';
+                $variables['descripcion'] = 'Solo HOMBRES, vota por el que consideres es el tipo más bien parecido del ambiente, cuyo físico rivaliza con los dioses y que podría conquistar a cualquier mujer con solo mirarla".';
+                $this->load->view('tarjeton', $variables);
+
+            elseif ($categoria_Actual == 'guapo'):
                 $this->session->sess_destroy();
                 // null the session (just in case):
                 $this->session->set_userdata(array('usuarioId' => '', 'logged_in' => FALSE));

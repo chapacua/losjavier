@@ -1,6 +1,6 @@
 RewriteEngine on
 
-RewriteBase /losjavier/
+RewriteBase /premios/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 08-04-2018 a las 23:21:12
+-- Tiempo de generación: 03-09-2018 a las 02:06:51
 -- Versión del servidor: 5.6.37
--- Versión de PHP: 5.6.31
+-- Versión de PHP: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `losJavier`
+-- Base de datos: `premios`
 --
 
 -- --------------------------------------------------------
@@ -32,31 +32,34 @@ CREATE TABLE IF NOT EXISTS `Respuestas` (
   `categoria` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `voto` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
   `fecha` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci COMMENT='Esta tabla contiene los votos que irán realizando los votantes';
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci COMMENT='Esta tabla contiene los votos que irán realizando los votantes';
 
 --
 -- Volcado de datos para la tabla `Respuestas`
 --
 
 INSERT INTO `Respuestas` (`respuestasId`, `usuariosId`, `categoria`, `voto`, `fecha`) VALUES
-(49, 1, 'puntualidad', 'Yecid', '2018-04-08'),
-(50, 1, 'puntualidadInv', 'Yosman', '2018-04-08'),
-(51, 1, 'mejorEstudiante', 'David', '2018-04-08'),
-(52, 1, 'mudoInv', 'Jaider', '2018-04-08'),
-(53, 1, 'mejorEstudianteInv', 'Yosman', '2018-04-08'),
-(54, 1, 'disculpas', 'Brayan', '2018-04-08'),
-(55, 1, 'gigolo', 'Yosman', '2018-04-08'),
-(56, 1, 'uniforme', 'Camilo', '2018-04-08'),
-(57, 1, 'mudo', 'Jeraldine', '2018-04-08'),
-(58, 1, 'uniformeInv', 'David', '2018-04-08'),
-(59, 1, 'elevado', 'Estiven', '2018-04-08'),
-(60, 1, 'elevadoInv', 'David', '2018-04-08'),
-(61, 1, 'asistencia', 'Yecid', '2018-04-08'),
-(62, 1, 'asistenciaInv', 'Estiven', '2018-04-08'),
-(63, 1, 'veneno', 'Luisa', '2018-04-08'),
-(64, 1, 'alegon', 'Gloria', '2018-04-08'),
-(65, 1, 'calma', 'Yosman', '2018-04-08'),
-(66, 1, 'imprudente', 'Brayan', '2018-04-08');
+(67, 1, 'puntualidad', 'Yecid', '2018-09-02'),
+(68, 1, 'puntualidadInv', 'Alejandro Mira', '2018-09-02'),
+(69, 1, 'mejorEstudiante', 'Alejandro Mira', '2018-09-02'),
+(70, 1, 'mudoInv', 'Alejandro Mira', '2018-09-02'),
+(71, 1, 'mejorEstudianteInv', 'Alejandro Mira', '2018-09-02'),
+(72, 1, 'disculpas', 'Alejandro Mira', '2018-09-02'),
+(73, 1, 'gigolo', 'Alejandro Mira', '2018-09-02'),
+(74, 1, 'uniforme', 'Alejandro Mira', '2018-09-02'),
+(75, 1, 'mudo', 'Alejandro Mira', '2018-09-02'),
+(76, 1, 'uniformeInv', 'Alejandro Mira', '2018-09-02'),
+(77, 1, 'elevado', 'Alejandro Mira', '2018-09-02'),
+(78, 1, 'elevadoInv', 'Alejandro Mira', '2018-09-02'),
+(79, 1, 'asistencia', 'Alejandro Mira', '2018-09-02'),
+(80, 1, 'asistenciaInv', 'Alejandro Mira', '2018-09-02'),
+(81, 1, 'veneno', 'Alejandro Mira', '2018-09-02'),
+(82, 1, 'alegon', 'Alejandro Mira', '2018-09-02'),
+(83, 1, 'calma', 'Alejandro Mira', '2018-09-02'),
+(84, 1, 'simpatia', 'Alejandro Mira', '2018-09-02'),
+(85, 1, 'imprudente', 'Alejandro Mira', '2018-09-02'),
+(86, 1, 'nea', 'Alejandro Mira', '2018-09-02'),
+(87, 1, 'guapo', 'Alejandro Mira', '2018-09-02');
 
 -- --------------------------------------------------------
 
@@ -105,7 +108,7 @@ ALTER TABLE `Usuarios`
 -- AUTO_INCREMENT de la tabla `Respuestas`
 --
 ALTER TABLE `Respuestas`
-  MODIFY `respuestasId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=67;
+  MODIFY `respuestasId` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=88;
 --
 -- AUTO_INCREMENT de la tabla `Usuarios`
 --
